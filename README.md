@@ -3,7 +3,7 @@
 
 Using the API
 
-1. Download the API from http://www.sybero.in. Unzip the zipped file wherever you want.
+1. Download the API from  https://github.com/rohit7209/HideDetails-API. Unzip the zipped file wherever you want.
 2. Run hideDetails.jar
 3. Add as much as entity you want:
 	Ex:
