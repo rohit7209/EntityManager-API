@@ -2,55 +2,55 @@
 Using the API
 
 
-1. Download the API from http://www.sybero.in. Unzip the zipped file wherever you want.
+1. Download the API from https://github.com/rohit7209/EntityManager-API. Unzip the zipped file wherever you want.
 
 
 
-2. Run hideDetails.jar
+2. Run EntityManager.jar
 
 
 
 3. Add as much as entity you want:
 
-    
-	Ex:    	Entity Name: password
+Â  Â  
+	Ex: Â  Â 	Entity Name: password
 
-            
+Â  Â  Â  Â  Â  Â  
 		Entity Value: 123@sybero
 
 
 
-4. Now click ‘Encode Credentials’
+4. Now click â€˜Encode Credentialsâ€™
 
 
 
-5. You will see a new file has been created as ‘entities.sybo’. Copy this file and save it at safe place as it will act as the source of data.
+5. You will see a new file has been created as â€˜entities.syboâ€™. Copy this file and save it at safe place as it will act as the source of data.
 
 
 
-6. Now import the hideDetails.jar in your project and copy ‘entities.sybo’ to your project folder. 
+6. Now import the EntityManager.jar in your project and copy â€˜entities.syboâ€™ to your project folder. 
 	The location will be as:
 
-    
+Â  Â  
 	In windows:
 
-    
+Â  Â  
 	C:\Users\Sybero Home\Documents\NetBeansProjects\<YourProjectName>
 
 
 
 7. Sample program using this API:
 
-    
+Â Â  Â 
 	
 	File name: Example.java
 
 
 	
 	
-	import hidedetails.Entity;
- 
-	import hidedetails.EntityException;
+	import entitymanager.Entity;
+Â 
+	import entitymanager.EntityException;
 
 
 	
@@ -59,21 +59,21 @@ Using the API
   		public static void main(String[] args) {
     
 			try{
-      
+   Â  Â 
 				Entity entity = new Entity();
-      
-				System.out.println(“user : ”+entity.getEntity(“username”));
-      
-				System.out.println(“pass : ”+entity.getEntity(“password”));
-      
-				System.out.println(“host : ”+entity.getEntity(“hostname”));
+ Â  Â  Â 
+				System.out.println(â€œuser : â€+entity.getEntity(â€œusernameâ€));
+ Â  Â  Â 
+				System.out.println(â€œpass : â€+entity.getEntity(â€œpasswordâ€));
+ Â  Â  Â 
+				System.out.println(â€œhost : â€+entity.getEntity(â€œhostnameâ€));
     
 			}catch(EntityException e){
       
 				System.out.println(e.getMessage());
-    
-			}    
-  
+Â Â  Â 
+			}Â Â  Â 
+ Â 
 		}
 	
 }
@@ -89,17 +89,17 @@ Using the API
 
 
 
-8. Now develop your project as you want, but remember to add ‘entities.sybo’ as your project source, the file must be in folder containing your built <YourProjectName>.jar during distribution.
+8. Now develop your project as you want, but remember to add â€˜entities.syboâ€™ as your project source, the file must be in folder containing your built <YourProjectName>.jar during distribution.
 
 
 
 
-How to edit or add some more details in ‘entities.sybo’ ?
+How to edit or add some more details in â€˜entities.syboâ€™ ?
 
 
 
-For example you forget to add some password to the ‘entities.sybo’ file and you want to add these data right now. 
-Simply delete previous ‘entities.sybo’ file and create a fresh file following the previouse process and add copy it to your project folder.
+For example you forget to add some password to the â€˜entities.syboâ€™ file and you want to add these data right now. 
+Simply delete previous â€˜entities.syboâ€™ file and create a fresh file following the previouse process and add copy it to your project folder.
 
 
 
