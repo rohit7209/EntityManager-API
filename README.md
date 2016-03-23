@@ -3,15 +3,15 @@
 
 Using the API
 
-1. Download the API from  https://github.com/rohit7209/HideDetails-API. Unzip the zipped file wherever you want.
-2. Run hideDetails.jar
+1. Download the API from  https://github.com/rohit7209/EntityManager-API. Unzip the zipped file wherever you want.
+2. Run EntityManager.jar
 3. Add as much as entity you want:
 	Ex:
   Entity Name: password
   Entity Value: 123@sybero
 4. Now click ‘Encode Credentials’
 5. You will see a new file has been created as ‘entities.sybo’. Copy this file and save it at safe place as it will act as the source of data.
-6. Now import the hideDetails.jar in your project and copy ‘entities.sybo’ to your project folder. 
+6. Now import the EntityManager.jar in your project and copy ‘entities.sybo’ to your project folder. 
 	The location will be as:
 	In windows:
 	C:\Users\Sybero Home\Documents\NetBeansProjects\<YourProjectName>
@@ -19,18 +19,20 @@ Using the API
 
 	File name: Example.java
 
-	import hidedetails.Entity;
-	import hidedetails.EntityException;
+
+	import entitymanager.Entity;                 //import entity class
+	
+	import entitymanager.EntityException;        //import exception class
 	
 	public class Example {
 	
   		public static void main(String[] args) {
 			try{
-				Entity entity = new Entity();
-				System.out.println(“user : ”+entity.getEntity(“username”));
-				System.out.println(“pass : ”+entity.getEntity(“password”));
-				System.out.println(“host : ”+entity.getEntity(“hostname”));
-			}catch(EntityException e){
+				Entity entity = new Entity();                                         //creates an object of 'Entity'
+				System.out.println(“user : ”+entity.getEntity(“username”));           //prints 'sybero'
+				System.out.println(“pass : ”+entity.getEntity(“password”));           //prints '123@sybero'
+				System.out.println(“host : ”+entity.getEntity(“hostname”));           //prints 'host.sybero'
+			}catch(EntityException e){                                                    //catch exception if thrown
 				System.out.println(e.getMessage());
 			}
 		}
